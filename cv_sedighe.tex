@@ -1,0 +1,233 @@
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper
+\usepackage{standalone}
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage[scale=0.85]{geometry} % Reduce document margins
+\usepackage{enumitem}  
+\renewcommand\refname{}
+\usepackage{etoolbox}
+\usepackage[dvipsnames]{xcolor}
+\PassOptionsToPackage{x11names}{xcolor}
+\definecolor{blue1}{rgb}{0.0, 0.53, 0.74}
+\definecolor{blue2}{rgb}{0.0, 0.18, 0.39}
+
+
+\vspace*{-3em} % squish the references together
+\usepackage[style=authoryear,sorting=ydnt,dashed=true]{biblatex}%backend=biber,style=numeric]
+\renewbibmacro*{date}{}
+\renewbibmacro*{date+extrayear}{}
+\renewbibmacro*{issue+date}{}
+\newcommand*{\bibyear}{}
+\defbibenvironment{bibliography}
+{\list
+ {\iffieldequals{year}{\bibyear}
+		{}
+		{\printfield{year}%
+			\savefield{year}{\bibyear}} }
+	{\setlength{\topsep}{0pt}% layout parameters based on moderncvstyleclassic.sty
+		\setlength{\labelwidth}{\hintscolumnwidth}%
+		\setlength{\labelsep}{\separatorcolumnwidth}%
+		\setlength{\itemsep}{\bibitemsep}%
+		\leftmargin\labelwidth%
+		\advance\leftmargin\labelsep}%
+	\sloppy\clubpenalty4000\widowpenalty4000}
+{\endlist}
+{\item}
+
+\addbibresource{journal.bib}
+\newcommand{\bibsection}{}
+\newcommand{\mnras}{\textbf{\textcolor{blue2}{MNRAS}}}
+\newcommand{\aj}{\textbf{\textcolor{blue2}{AJ}}}
+\newcommand{\apj}{\textbf{\textcolor{blue2}{ApJ}} }
+\newcommand{\aap}{\textbf{\textcolor{blue2}{A \&A}} }
+\newcommand{\ijpr}{\textbf{\textcolor{blue2}{IJPR}} }
+
+\firstname{\textbf{Sedighe}\\}% Your first name
+\familyname{\textbf{Sajadian}} % Your last name
+\title{Curriculum Vitae}
+\address{Department of Physics}{Isfahan University of Technology}
+\mobile{(+98) 9179965712}
+\email{s.sajadian@iut.ac.ir} 
+\homepage{https://sajadian.iut.ac.ir/}{https://sajadian.iut.ac.ir/}
+%\extrainfo{\faGithub\href{https://github.com/SSajadian54}{https://github.com/SSajadian54}}
+%\faGithub\href{https://github.com/}{SSajadian54} 
+%\extrainfo{\faGithub\href{https://github.com/}{SSajadian54}}% <===============
+\extrainfo{%
+\httplink{www.linkedin.com/in/sedighe-sajadian-9020a237/}\\
+\httplink{github.com/SSajadian54}
+}
+%\extrainfo{\faGithub\href{https://github.com/}{ name}}% <===============
+%\extrainfo{\faLinkedin\href{https://www.linkedin.com/in/sedighe-sajadian-9020a237/}{linkedin.com/in/sedighe-sajadian-9020a237}}
+\photo[85pt][0.35pt]{picture}
+
+\newcommand{\cvdoublecolumn}[2]{%
+  \cvitem[.75em]{}{
+    \begin{minipage}[t]{\listdoubleitemcolumnwidth}#1\end{minipage}%
+    \hfill\usepackage{xcolor}
+    \begin{minipage}[t]{\listdoubleitemcolumnwidth}#2\end{minipage}} }
+\newcommand\Colorhref[3][orange]{\href{#2}{\small\color{#1}#3}}
+%----------------------------------------------------------------------------------------
+
+
+\begin{document}
+\makecvtitle 
+%\lipsum
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education}
+\cventry{2007--2011: }{\textcolor{blue2}{PhD of Physics, Astrophysics}}{Physics Department, Sharif University of Technology}{Tehran, Iran}{}
+{Studying detection of exo-planet by microlensing; Ph.D. Supervisor: S. Rahvar} \cvitem{CGPA: }{18.37/20}
+\cventry{2005--2007: }{\textcolor{blue2}{Master of Physics, Particle physics}}{Physics department, Sharif University of Technology}{Tehran, Iran}{}
+{Studying dynamic symmetry of Hydrogen atom; M.Sc. Supervisor: F. Ardalan} \cvitem{CGPA: }{18.09/20}
+\cventry{2001--2005: }{\textcolor{blue2}{Bachelor of Physics}}{Shahid-Chamran University}{Ahvaz, Iran}{}{} \cvitem{CGPA: }{18.27/20}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{section}{Employment History}
+%\cvitem{2022-present}{\textcolor{blue2}{\textbf{Student Vice Chair}}, Physics department, Isfahan University of Technology, Isfahan, Iran.}		
+\cvitem{2017-present}{\textcolor{blue2}{\textbf{Assistant professor}}, Physics department, Isfahan University of Technology, Isfahan, Iran.}	
+\cvitem{2015-2016}{\textcolor{blue2}{\textbf{Postdoctoral researcher}}, Physics department, Sharif University of Technology, Tehran, Iran.}	
+\cvitem{2011-2014}{\textcolor{blue2}{\textbf{Postdoctoral researcher}}, School of Astronomy, IPM, Tehran, Iran.}	
+\end{section} 
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Professional Memberships}
+\cvitem{2022, 22 Dec (comming)}{Chair of organizing committee in \textcolor{blue2}{\textbf{\textit{Physics Day} Workshop}} for high school students from Isfahan province, Physics Department, Isfahan University of Technology(Outreach activity)}
+\cvitem{2022, 28-29 July}{Chair of scientific committee in \textcolor{blue2}{\textbf{\textit{Transient events and Multi-messenger astrophysics} Workshop}}, Physics Department, Isfahan University of Technology in cooperation with INO, and IPM.}
+\cvitem{2018, Jan}{Chair of organizing committee in \textcolor{blue2}{\textbf{\textit{National conference on gravitation and cosmology}}}, Physics Department, Isfahan University of Technology.}
+\cvitem{2016, Dec}{Organizer and lecturer in \textcolor{blue2}{\textbf{\textit{Searching stellar brightness curves}~Workshop}} in Physics Department, Sharif University of Technology, Tehran.}
+\cvitem{2016 --present}{\textcolor{blue2}{\textbf{Member of MiNDSTEp consortium}}, a follow-up observing group for on-going microlensing events with the Danish 1.54 m telescope.}
+\cvitem{2017 --present}{Reviewer of \textcolor{blue2}{\textbf{MNRAS, MNRAS Letter, The Astronomical Journal, and Iranian Journal of Physics Research}}. }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{section}{Professional Experience}
+%\cvitem{}{\textit{\textbf{}} .}	
+\cvitem{2017-present }{\textcolor{blue2}{\textbf{Data-reduction}} of images taken by the Lucky Imaging camera on the Danish telescope with DANDIA pipeline.}	
+\cvitem{2021}{Working with \textcolor{blue2}{\textbf{IRAF/ DAOPHOT}} for images taken with the Danish telescope.}
+\cvitem{2022}{Using \textcolor{blue2}{\textbf{Supervised Machine Learning}} for microlensing data analysis and for Gaia data.}
+\cvitem{2016-present}{\textcolor{blue2}{\textbf{On-site and remote observations}}, Danish 1.54 m telescope, La Silla observatory, Chile.}	
+\end{section} 
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{section}{Fellowships, Awards, \&  Honors} 
+\subsection{Grants}	
+\cvitem{2020-2021}{Research \textcolor{blue2}{\textbf{Grant}} from Prof.~Han, Department of Physics, Chungbuk National univbersity. I was his researcher for one year.}
+\cvitem{2017-2019}{\textcolor{blue2}{\textbf{Grant}} for accomplishing a research project \textcolor{blue2}{Extra solar planets: detection, formation}, from \textit{Iran Science National Foundation(ISNF)}, No: INSF-95843339.}	
+\cvitem{2016-2017}{\textcolor{blue2}{\textbf{Grant}} for accomplishing a research project \textcolor{blue2}{polarimetry microlensing}, from \textit{Iran Science National Foundation (ISNF)}, No: INSF-94017434.}	
+\cvitem{2015-2016}{\textcolor{blue2}{\textbf{Grant}} for publishing ISI papers in Q1 journals, from \textit{Iran Science Elites Federation}.}	
+\subsection{Honors}
+\cvitem{2005}{Ranked 54th in the \textcolor{blue2}{\textbf{M.Sc. Qualifying Exam}} with more 50000 participants. }
+\cvitem{2001-2005}{Ranked 1th during \textcolor{blue2}{\textbf{B.Sc. program in Physics Department}}, Shahid-Chamran University.}
+\cvitem{2006--2010}{Membership in \textcolor{blue2}{\textbf{Exceptional Talent Academy}}, Sharif University of Technology, Tehran.}
+\cvitem{2003--2005}{Membership in \textcolor{blue2}{\textbf{Exceptional Talent Academy}}, Shahid-Chamran University, Ahvaz.}
+\end{section} 
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{section}{Teaching} 
+\cvitem{2022, Spring}{\textcolor{blue2}{\textbf{Analytical mechanic I}} for undergraduate students, physics department, Isfahan University of Technology.}	
+\cvitem{2018, 2019, 2022}{\textcolor{blue2}{\textbf{Astrophysics}} for undergraduate students, Physics Department, Isfahan University of Technology.}	
+\cvitem{2019, 2021, 2022}{\textcolor{blue2}{\textbf{Cosmology \& Special topics in cosmology}} for graduate students, Physics Department, Isfahan University of Technology.}
+\cvitem{2017-present}{\textcolor{blue2}{\textbf{Fundamental Physics I (calculus-based)}} fall semesters for undergraduate and engineering students, Isfahan University of Technology.}	
+\cvitem{2017-present}{\textcolor{blue2}{\textbf{Fundamental Physics II (calculus-based)}} spring semesters for undergraduate and engineering students, Isfahan University of Technology.}	
+\end{section} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{section}{Supervising projects}
+	\subsection{\textbf{Bachelor projects}}
+	\cvitem{2022-}{\textit{\textbf{Setareh Moein}}; Thesis: Studying stellar atmosphere modelling with \textit{MARCS} code. } 
+	\cvitem{2022, Sep}{\textit{\textbf{Hossein Fatheddin}}; Thesis: New method to solve binary-lens equation (\textbf{Results published}).}
+	\cvitem{2021, Nov}{\textit{\textbf{Ehsan Goreishi}}; Thesis: Studying age-velocity relation in Gaia data.}
+	\cvitem{2020, Sep}{\textit{\textbf{Melika Sarrami}}; Thesis: Finite-source effect in shoft-duration microlensing events.}
+	\cvitem{2020, Sep}{\textit{\textbf{Mahshad Rashidi}}; Thesis: Characterizing microlensing light curves from spotted stars (\textbf{Results published}).}
+	\cvitem{2019, July}{\textit{\textbf{Ali Salehi}}; Thesis: Detecting inner regions of protoplanetary discs around sources of microlensing with WFIRST Survey (\textbf{Results published}).}
+	\subsection{\textbf{Master projects}}
+	\cvitem{2022-}{\textit{\textbf{Sina Hematian}}; Thesis: Applications of Machine Learning approaches in microlensing observations}
+	 \cvitem{2022-}{\textit{\textbf{Aref Asadi}}; Thesis: Studying consistency between Gaia data and Besancon model}
+    \cvitem{2021-}{\textit{\textbf{AliReza  Zareshahi}}; Thesis: On the detection of free-floating moon-planet systems through microlensing observations.}
+	\cvitem{2021-}{\textit{\textbf{AmirAli Tavajoh}}; Thesis: Improving Newton's and Laguerre's methods for solving binary-lens equations.}
+	\cvitem{2021}{\textit{\textbf{Neda Kalantari}}; Thesis: Studying possibility pf spectro-polarimetry observations from microlensing events.}
+    \cvitem{2020}{\textit{\textbf{Fatemeh Kazemian}}; Thesis: Mass-Velocity Dispersion Relation by using the Gaia Data and its effect on short-duration microlensing events (\textbf{Results published}).}
+   \cvitem{2019}{\textit{\textbf{Parisa Sangtarash}}; Thesis: Gravitational microlensing from limb-darkened source stars (\textbf{Results published}).}	
+   	\cvitem{2018}{\textit{\textbf{Banafshe Adami}}; Thesis: A review on data-reduction process of microlensing events (\textbf{Results published}).}
+	\cvitem{2017}{\textit{\textbf{Mariyam Javadizadeh}}; Thesis: Circumstellar disk perturbations on microlensing light curves.}
+
+	\subsection{\textbf{PhD. projects}}
+	\cvitem{2021-}{\textit{\textbf{Parisa Sangtarash}}; Thesis: Gravitational Microlensing of variable stars toward M31.}
+	\cvitem{2020}{\textit{\textbf{Elahe Khalouei}}; Co-supervisor; Thesis: Measuring stellar atmosphere parameters using follow-up polarimetric microlensing observations (\textbf{Results published}).}
+	\cvitem{2019}{\textit{\textbf{Fatemeh Bagheri}}; Advisor; Thesis: Exoplanet detection through space-based microlensing observation (\textbf{Results published}).}
+\end{section}
+
+
+\begin{section}{Publications}
+\nocite{*}
+\leavevmode\printbibliography[heading=none]
+%\printbibliography[sorting=nyt]
+\end{section}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{section}{Selected Talks in Conferences \& Meetings} 
+\cvitem{2022, Sep}{\textcolor{blue2}{\textbf{25th Microlensing Conference}}, Institut d'Astrophysique de Paris (IAP), Paris. Title: Sensitivity to habitable planets in the Roman microlensing survey.}
+\cvitem{2021, Feb}{In weekly meeting, \textcolor{blue2}{\textbf{Physics Department, Isfahan university of Technology}}. Title: Detecting isolated blackholes in the Galactic disk through astrometric microlensing.}	
+\cvitem{2021, April}{In weekly meeting, \textcolor{blue2}{\textbf{Physics Department, Cambridge university}}. Title: Gravitational microlensing: Observation and Interpretation.}	
+\cvitem{2020, July}{In weekly meeting, \textcolor{blue2}{\textbf{Physics Department, Sharif University of Technology}}. Title: Microlensing and variable stars.}	
+\cvitem{2018, Nov}{In monthly meeting, \textcolor{blue2}{\textbf{Isfahan physics club}}, Isfahan, Iran. Title: Observation with Danish 1.54m telescope.}	
+\cvitem{2017, Dec}{In monthly meeting, \textcolor{blue2}{\textbf{Adib center of astronomy learning}}, Isfahan, Iran. Title: Planetary systems observations.}	
+\cvitem{2016, March}{\textcolor{blue2}{\textbf{Annual meeting of the MiNDSTEp consortium}}, Salerno University, Italy. Title: The advantages of using Lucky Imaging camera for observations of planetary microlensing. }
+\cvitem{2013, Jan}{\textcolor{blue2}{\textbf{National Conference on Gravitation and Cosmology}}, Shahid Beheshti Uiversity, Iran. Title: Astrometric properties of gravitational lenses.}
+\cvitem{2012, May}{\textcolor{blue2}{\textbf{IPM Physics Spring Conference}}, IPM, Iran. Title: Detecting gravitational microlensing by Lucky imaging camera.}		
+\cvitem{2010, May}{\textcolor{blue2}{\textbf{Meeting on Research in Astronomy}}, IASBS, Zanjan. Title: Detecting hot Jupiters in caustic crossing.}		
+\end{section} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{section}{Computer skills} 
+\cvitem{Programming Languages}{Python, C, C++, IDL, Fortran, Mathematica}
+\cvitem{Scientific Tools}{Iraf (worked with DAOPHOT), DS9, DANDIA}
+\cvitem{Database}{SQL, pandas, Machine Learning (worked with scikit-learn)}
+\end{section} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{section}{Interests}
+\cvitem{Sport}{Mountain climbing, Running}	
+\cvitem{Reading book. }{I enjoy reading books very much, especially self-help books, novels, etc. }	
+%\cvitem{}{\textit{\textbf{}} .}	
+\end{section}  
+
+
+\section{Referees}
+\begin{tabular}{lr}
+	\begin{minipage}[t]{3in}
+		\textbf{Prof. Uffe G. {J{\o}rgensen}}\\
+		Professor, Niels Bohr Institute\\
+		Denmark\\
+	    (+45) 61306640\\
+		\Letter\ \href{}{\textcolor{blue1}{uffegj@nbi.ku.dk}}
+	\end{minipage}
+	\\
+	\\
+	\begin{minipage}[t]{3in}
+		\textbf{Prof.  Richard Ignace}\\
+		Professor, Department of Physics \\
+		East Tennessee state university\\
+		(+1) 4234396904\\
+		\Letter\ \href{}{\textcolor{blue1}{IGNACE@mail.etsu.edu}}
+	\end{minipage}
+    \\
+    \\
+	\begin{minipage}[t]{3in}
+		\textbf{Dr. Markus Hundertmark}\\
+		Researcher, Department of Physics \\
+		Heidelberg University\\
+		(+49) 6221541867\\
+		\Letter\ \href{}{\textcolor{blue1}{markus.hundertmark@uni-heidelberg.de}}
+	\end{minipage}
+	\\
+\end{tabular}
+
+
+
+
+\end{document}
